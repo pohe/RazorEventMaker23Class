@@ -1,0 +1,39 @@
+﻿@page
+@model RazorEventMaker23Class.Pages.Events.IndexModel
+@{
+    ViewData["Title"] = "List Events";
+}
+
+<h1>List of events</h1>
+
+<p>
+    <a asp-page="CreateEvent">Create a new event</a>
+</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Place</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Events)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.City</td>
+                <td>@item.DateTime</td>
+                <td><a>Edit</a></td>
+                <td><a>Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
