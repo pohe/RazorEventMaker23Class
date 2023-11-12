@@ -32,9 +32,7 @@ namespace RazorEventMaker23Class.Services
             {
                 ev.Id = 1;
             }
-
             _events.Add(ev);
-
         }
 
         public void DeleteEvent(Event ev)

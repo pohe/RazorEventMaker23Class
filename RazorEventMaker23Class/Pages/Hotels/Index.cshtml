@@ -1,0 +1,38 @@
+﻿@page
+@using RazorEventMaker23Class.Models;
+@model RazorEventMaker23Class.Pages.Hotels.IndexModel
+@{
+    ViewData["Title"] = "List hotels";
+}
+
+<p>
+    <a asp-page="CreateHotel">Create a new hotel</a>
+</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Hotel h in Model.Hotels)
+        {
+            <tr>
+                <td>@h.Id</td>
+                <td>@h.Name</td>
+                <td>@h.Address</td>
+                <td>@h.Description</td>
+                <td><a>Edit</a></td>
+                <td><a>Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
