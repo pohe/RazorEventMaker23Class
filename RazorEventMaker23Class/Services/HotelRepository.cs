@@ -5,7 +5,7 @@ namespace RazorEventMaker23Class.Services
 {
     public class HotelRepository : IHotelRepository
     {
-        Dictionary<int, Hotel> _hotels;
+        private Dictionary<int, Hotel> _hotels;
 
         public HotelRepository()
         {

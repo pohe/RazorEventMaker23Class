@@ -25,6 +25,10 @@ namespace RazorEventMaker23Class.Pages.Events
 
         public IActionResult OnPost() //Bruges til at oprette/update/delete
         {
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
             _repo.AddEvent(NewEvent);
             return RedirectToPage("Index");
         }
