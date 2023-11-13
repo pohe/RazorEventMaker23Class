@@ -1,4 +1,5 @@
-﻿using RazorEventMaker23Class.Interfaces;
+﻿using Microsoft.Extensions.Logging;
+using RazorEventMaker23Class.Interfaces;
 using RazorEventMaker23Class.Models;
 
 namespace RazorEventMaker23Class.Services
@@ -37,7 +38,8 @@ namespace RazorEventMaker23Class.Services
 
         public void DeleteEvent(Event ev)
         {
-            throw new NotImplementedException();
+            Event evToDelete= GetEvent(ev.Id);
+            _events.Remove(evToDelete);
         }
 
         public List<Event> GetAllEvents()
@@ -47,12 +49,31 @@ namespace RazorEventMaker23Class.Services
 
         public Event GetEvent(int id)
         {
-            throw new NotImplementedException();
+            foreach (Event evt in _events)
+            {
+                if (evt.Id == id)
+                    return evt;
+            }
+            return new Event();
         }
 
         public void UpdateEvent(Event ev)
         {
-            throw new NotImplementedException();
+            if (ev != null)
+            {
+                foreach (Event e in _events)
+                {
+                    if (ev.Id==e.Id)
+                    {
+                        e.Id= ev.Id;
+                        e.Name= ev.Name;
+                        e.Description= ev.Description;
+                        e.City= ev.City;
+                        e.DateTime=ev.DateTime;
+                        return;
+                    }
+                }
+            }
         }
 
 
