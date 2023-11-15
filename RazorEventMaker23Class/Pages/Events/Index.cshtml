@@ -10,6 +10,10 @@
     <a asp-page="CreateEvent">Create a new event</a>
 </p>
 
+<form>
+    search: <input type="text" asp-for="@Model.FilterCriteria"/>
+    <input type="submit" value="Filter" />
+</form>
 
 
 <table class="table">
@@ -32,7 +36,7 @@
                 <td>@item.City</td>
                 <td>@item.DateTime</td>
                 <td><a asp-page="EditEvent" asp-route-id="@item.Id">Edit</a></td>
-                <td><a>Delete</a></td>
+                <td><a asp-page="DeleteEvent" asp-route-deleteId="@item.Id">Delete</a></td>
             </tr>
         }
     </tbody>

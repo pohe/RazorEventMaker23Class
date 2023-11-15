@@ -38,8 +38,24 @@ namespace RazorEventMaker23Class.Services
 
         public void DeleteEvent(Event ev)
         {
-            Event evToDelete= GetEvent(ev.Id);
-            _events.Remove(evToDelete);
+            _events.Remove(ev);
+            //Event evToDelete= GetEvent(ev.Id);
+            //_events.Remove(evToDelete);
+        }
+
+        public List<Event> FilterEvents(string filterCriteria)
+        {
+            List<Event> filteredList= new List<Event>();
+            foreach(var evt in _events)
+            {
+                if(evt.Name.Contains(filterCriteria)|| evt.City.Contains(filterCriteria)||evt.Description.Contains(filterCriteria))
+                {
+                    filteredList.Add(evt);
+                }
+                
+            }
+
+            return filteredList;
         }
 
         public List<Event> GetAllEvents()

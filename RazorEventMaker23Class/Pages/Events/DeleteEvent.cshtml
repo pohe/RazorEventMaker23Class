@@ -1,0 +1,19 @@
+﻿@page
+@model RazorEventMaker23Class.Pages.Events.DeleteEventModel
+@{
+    ViewData["Title"] = "Delete event";
+}
+
+<h1>Delete event</h1>
+<form method="post">
+    <div class="form-group">
+        <label>Event id</label> : @Model.DeleteEvent.Id <br/>
+        <label>Event name</label> : @Model.DeleteEvent.Name <br/>
+        <label>Event city</label> : @Model.DeleteEvent.City <br/>
+        <label>Event date and time</label> : @Model.DeleteEvent.DateTime <br/>
+
+        <input type="submit" asp-page-handler="Delete" asp-route-nummer="@Model.DeleteEvent.Id" class="btn btn-danger" value="Delete event" />
+  
+        <input type="submit" value="Cancel" class="btn btn-warning" asp-page-handler="Cancel" />
+    </div>
+</form>

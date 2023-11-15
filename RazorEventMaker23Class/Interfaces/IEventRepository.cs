@@ -10,6 +10,6 @@ namespace RazorEventMaker23Class.Interfaces
         void AddEvent(Event ev);
         void DeleteEvent(Event ev);
         void UpdateEvent(Event ev);
-
+        List<Event> FilterEvents(string filterCriteria);
     }
 }

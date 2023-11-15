@@ -1,4 +1,6 @@
 ﻿@page
+@using RazorEventMaker23Class.Interfaces; 
+@inject IEventRepository repository;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -6,5 +8,6 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    <h2>Numbers of events @repository.GetAllEvents().Count </h2>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
