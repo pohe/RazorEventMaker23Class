@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 2,
+    "Name": "Kagebagning",
+    "Description": "Der bages kager",
+    "City": "K\u00F8benhavn",
+    "DateTime": "2023-11-16T16:07:00"
+  },
+  {
+    "Id": 4,
+    "Name": " Rom marathon",
+    "Description": "L\u00F8b",
+    "City": "ROm",
+    "DateTime": "2022-11-24T08:37:00"
+  },
+  {
+    "Id": 5,
+    "Name": "Tennis",
+    "Description": "I hallen ...",
+    "City": "K\u00F8benhavn",
+    "DateTime": "2023-11-16T11:02:00"
+  }
+]
