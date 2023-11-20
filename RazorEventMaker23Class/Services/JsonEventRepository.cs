@@ -32,7 +32,9 @@ namespace RazorEventMaker23Class.Services
 
         public void DeleteEvent(Event ev)
         {
-            throw new NotImplementedException();
+            List<Event> events = GetAllEvents();
+            events.Remove(ev);
+            JsonFileWriter.WriteToJson(events, jsonFileName);
         }
 
         public List<Event> FilterEvents(string filterCriteria)

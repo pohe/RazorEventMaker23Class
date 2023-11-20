@@ -14,5 +14,14 @@ namespace RazorEventMaker23Class.Helpers
             }
         }
 
+
+        public static List<Country> ReadJsonCountry(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Country>>(indata);
+            }
+        }
     }
 }

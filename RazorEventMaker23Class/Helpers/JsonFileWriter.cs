@@ -19,5 +19,20 @@ namespace RazorEventMaker23Class.Helpers
                 JsonSerializer.Serialize<Event[]>(writter, events.ToArray());
             }
         }
+
+
+        public static void WritetoJsonCountry(List<Country> countries, string jsonFileName)
+        {
+            
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true,
+                });
+                JsonSerializer.Serialize<Country[]>(writter, countries.ToArray());
+            }
+        }
     }
 }

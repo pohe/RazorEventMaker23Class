@@ -1,12 +1,5 @@
 [
   {
-    "Id": 2,
-    "Name": "Kagebagning",
-    "Description": "Der bages kager",
-    "City": "K\u00F8benhavn",
-    "DateTime": "2023-11-16T16:07:00"
-  },
-  {
     "Id": 4,
     "Name": " Rom marathon",
     "Description": "L\u00F8b",

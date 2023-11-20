@@ -24,5 +24,14 @@ namespace RazorEventMaker23Class.Models
         {
         }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null) return false;
+            else if (!(obj is Event)) return false;
+            else if ( ((Event)obj).Id == this.Id)
+                return true;
+
+            return false;
+        }
     }
 }

@@ -1,0 +1,30 @@
+[
+  {
+    "Code": "DK",
+    "Name": "Denmark"
+  },
+  {
+    "Code": "FR",
+    "Name": "France"
+  },
+  {
+    "Code": "UK",
+    "Name": "United Kingdom"
+  },
+  {
+    "Code": "GR",
+    "Name": "Germany"
+  },
+  {
+    "Code": "IT",
+    "Name": "Italy"
+  },
+  {
+    "Code": "SE",
+    "Name": "Sweeden"
+  },
+  {
+    "Code": "NO",
+    "Name": "Norway"
+  }
+]
