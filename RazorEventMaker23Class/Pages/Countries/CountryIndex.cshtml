@@ -13,3 +13,33 @@
 
     </ul>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Code
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Countries)
+        {
+            <tr>
+                <td>
+                    @item.Code
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    <a asp-page="CountryEvents" asp-route-Code="@item.Code">Country Events</a> |
+                    <a asp-page="DeleteCountry" asp-route-Code="@item.Code">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
