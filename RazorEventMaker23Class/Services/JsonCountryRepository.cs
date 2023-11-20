@@ -1,4 +1,5 @@
-﻿using RazorEventMaker23Class.Interfaces;
+﻿using RazorEventMaker23Class.Helpers;
+using RazorEventMaker23Class.Interfaces;
 using RazorEventMaker23Class.Models;
 
 namespace RazorEventMaker23Class.Services
@@ -19,7 +20,7 @@ namespace RazorEventMaker23Class.Services
 
         public List<Country> GetAllCountries()
         {
-            throw new NotImplementedException();
+            return JsonFileReader.ReadJsonCountry(filePath);
         }
 
         public Country GetCountry(string code)

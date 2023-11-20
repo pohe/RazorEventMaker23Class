@@ -1,0 +1,15 @@
+﻿@page
+@using RazorEventMaker23Class.Interfaces;
+@inject ICountryRepository repository;
+@model RazorEventMaker23Class.Pages.Countries.CountryIndexModel
+@{
+    ViewData["Title"] = "Countries";
+}
+<h1>Countries</h1>
+
+<div>
+    <ul>
+        <li>There are @repository.GetAllCountries().Count   countries</li>
+
+    </ul>
+</div>
