@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace RazorEventMaker23Class.Models
 {
@@ -6,6 +7,9 @@ namespace RazorEventMaker23Class.Models
     {
         
         public int Id { get; set; }
+
+        [DisplayName("Landekode")]
+        public string CountryCode  { get; set; }
 
         [Display(Name="Event Name")]
         [Required(ErrorMessage = "Name of the event is required"), MaxLength(30)]

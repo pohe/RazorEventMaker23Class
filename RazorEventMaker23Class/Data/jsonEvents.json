@@ -1,6 +1,7 @@
 [
   {
     "Id": 4,
+    "CountryCode": "IT",
     "Name": " Rom marathon",
     "Description": "L\u00F8b",
     "City": "ROm",
@@ -8,9 +9,18 @@
   },
   {
     "Id": 5,
+    "CountryCode": "DK",
     "Name": "Tennis",
     "Description": "I hallen ...",
     "City": "K\u00F8benhavn",
     "DateTime": "2023-11-16T11:02:00"
+  },
+  {
+    "Id": 6,
+    "CountryCode": "DK",
+    "Name": "Sejlads",
+    "Description": "P\u00E5 havet",
+    "City": "K\u00F8benhavn",
+    "DateTime": "2023-11-20T11:41:00"
   }
 ]
