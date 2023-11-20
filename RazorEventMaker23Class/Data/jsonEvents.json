@@ -1,6 +1,7 @@
 [
   {
     "Id": 4,
+    "EventImage": "Marathon.jfif",
     "CountryCode": "IT",
     "Name": " Rom marathon",
     "Description": "L\u00F8b",
@@ -9,6 +10,7 @@
   },
   {
     "Id": 5,
+    "EventImage": "tennis.jfif",
     "CountryCode": "DK",
     "Name": "Tennis",
     "Description": "I hallen ...",
@@ -17,10 +19,20 @@
   },
   {
     "Id": 6,
+    "EventImage": "sejlads.jpeg",
     "CountryCode": "DK",
     "Name": "Sejlads",
     "Description": "P\u00E5 havet",
     "City": "K\u00F8benhavn",
     "DateTime": "2023-11-20T11:41:00"
+  },
+  {
+    "Id": 7,
+    "EventImage": "bf51ca1e-d121-4b91-8cf5-8c422d09f552_sejlalds2.jpg",
+    "CountryCode": "DK",
+    "Name": "Sejlads2",
+    "Description": "Der sejles",
+    "City": "Roskilde",
+    "DateTime": "2023-11-20T13:05:00"
   }
 ]

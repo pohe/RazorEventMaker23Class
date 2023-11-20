@@ -19,6 +19,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th>Image</th>
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
@@ -29,8 +30,11 @@
     </thead>
     <tbody>
         @foreach(var item in Model.Events)
-        {
+       {
             <tr>
+                <td>
+                    <img src="~/images/eventimages/@item.EventImage" width="80" height="80" />
+                </td>
                 <td>@item.Id</td>
                 <td>@item.Name</td>
                 <td>@item.Description</td>
