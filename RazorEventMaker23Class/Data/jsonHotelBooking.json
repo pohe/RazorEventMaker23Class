@@ -1,0 +1,25 @@
+[
+  {
+    "BookingId": 1,
+    "HotelId": 1,
+    "UserID": 1,
+    "DateTime": "2023-11-28T09:24:00",
+    "NumberOfDays": 3,
+    "Facilities": [],
+    "PriceModel": null,
+    "IsVip": 0,
+    "Country": 0
+  },
+  {
+    "BookingId": 2,
+    "HotelId": 2,
+    "UserID": 2,
+    "DateTime": "2023-12-29T09:24:00",
+    "NumberOfDays": 2,
+    "Facilities": [],
+    "PriceModel": null,
+    "IsVip": 0,
+    "Country": 0
+  }
+]
+
