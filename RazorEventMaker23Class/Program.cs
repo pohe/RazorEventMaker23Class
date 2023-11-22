@@ -9,6 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
 builder.Services.AddSingleton<IHotelRepository, HotelRepository>();
 builder.Services.AddTransient<ICountryRepository, JsonCountryRepository>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 var app = builder.Build();
 
