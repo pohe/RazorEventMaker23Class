@@ -25,7 +25,12 @@ namespace RazorEventMaker23Class.Services
 
         public Country GetCountry(string code)
         {
-            throw new NotImplementedException();
+            foreach (Country country in GetAllCountries())
+            {
+                if (country.Code == code)
+                    return country;
+            }
+            return null;//new Country()
         }
     }
 }

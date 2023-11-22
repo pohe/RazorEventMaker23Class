@@ -73,6 +73,11 @@ namespace RazorEventMaker23Class.Services
             return new Event();
         }
 
+        public List<Event> SearchEventByCode(string code)
+        {
+            throw new NotImplementedException();
+        }
+
         public void UpdateEvent(Event ev)
         {
             if (ev != null)

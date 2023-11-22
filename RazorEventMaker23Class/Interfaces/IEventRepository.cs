@@ -11,5 +11,6 @@ namespace RazorEventMaker23Class.Interfaces
         void DeleteEvent(Event ev);
         void UpdateEvent(Event ev);
         List<Event> FilterEvents(string filterCriteria);
+        List<Event> SearchEventByCode(string code);
     }
 }

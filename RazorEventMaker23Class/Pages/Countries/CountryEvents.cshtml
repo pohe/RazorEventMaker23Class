@@ -1,4 +1,57 @@
 ﻿@page
 @model RazorEventMaker23Class.Pages.Countries.CountryEventsModel
 @{
+    ViewData["Title"] = "CountryEvent";
 }
+<h1>Events in @Model.Country.Name</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                DateTime
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    @item.City
+                </td>
+                <td>@item.CountryCode</td>
+                <td>
+                    @item.DateTime
+                </td>
+                <td>
+                    <a asp-page="/Events/EditEvent" asp-route-id="@item.Id">Edit</a>|
+                    <a asp-page="/Events/DetailEvent" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="/Events/DeleteEvent" asp-route-id="@item.Id">Delete</a> |
+                    <a asp-page="/Hotels/BookHotel" asp-route-CountryCode="@Model.Country.Code">Book hotel</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+

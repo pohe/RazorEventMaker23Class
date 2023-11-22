@@ -67,6 +67,19 @@ namespace RazorEventMaker23Class.Services
             return new Event();
         }
 
+        public List<Event> SearchEventByCode(string code)
+        {
+            List<Event> countryEventList = new List<Event>();
+            foreach (Event evt in GetAllEvents()) 
+            { 
+                if (evt.CountryCode == code)
+                {
+                    countryEventList.Add(evt);
+                }
+            }
+            return countryEventList;
+        }
+
         public void UpdateEvent(Event ev)
         {
             if (ev != null)
