@@ -28,7 +28,7 @@ namespace RazorEventMaker23Class.Services
 
         public Hotel GetHotel(int id)
         {
-            if (!_hotels.ContainsKey(id))
+            if (_hotels.ContainsKey(id))
             {
                 return _hotels[id];
             }

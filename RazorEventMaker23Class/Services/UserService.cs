@@ -10,12 +10,12 @@ namespace RazorEventMaker23Class.Services
 
         public List<User> GetAllUsers()
         {
-            return JsonFileReader.ReadJsonUsers(JsonFileName);
+            return JsonFileReader<User>.ReadJson(JsonFileName);
         }
 
         public User GetUser(int id)
         {
-            List<User> users = JsonFileReader.ReadJsonUsers(JsonFileName);
+            List<User> users = JsonFileReader<User>.ReadJson(JsonFileName);
             foreach (var item in users)
             {
                 if (item.UserId == id)

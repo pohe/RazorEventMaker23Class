@@ -1,4 +1,92 @@
 ﻿@page
+@using RazorEventMaker23Class.Interfaces;
+@inject IHotelBookingRepository repo;
+@inject IHotelRepository hotelRepository;
+@inject IUserService userRepo;
 @model RazorEventMaker23Class.Pages.Hotels.ListHotelBookingsModel
 @{
+    ViewData["Title"] = "List bookings";
 }
+<h1>List hotel bookings</h1>
+
+<div>
+    <ul>
+        <li> There are @repo.GetAllHotelBookings().Count hotel bookings</li>
+    </ul>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                BookingId
+            </th>
+            <th>
+                Hotel Name
+            </th>
+            <th>
+                Guest Name
+            </th>
+            <th>Date from</th>
+            <th>Date to</th>
+            <th>
+                Needed facilities
+            </th>
+            <th>Price model</th>
+            <th>
+                Vip
+            </th>
+            <th>
+                Country
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Bookings)
+        {
+            <tr>
+                <td>
+                    @item.BookingId
+                </td>
+                <td>
+                    @hotelRepository.GetHotel(item.HotelId).Name
+                </td>
+                <td>
+                    @userRepo.GetUser(item.UserId).Name
+                </td>
+                <td>
+                    @item.DateTime.ToShortDateString()
+                </td>
+                <td>
+                    @item.DateTime.AddDays(item.NumberOfDays*1.0).ToShortDateString()
+                </td>
+                <td>
+                    @String.Join(',', item.Facilities)
+                    @* @foreach(var f in item.Facilities)
+                {
+                <span>@f.ToString()</span>
+                } *@
+                </td>
+                <td>
+                    @item.PriceModel
+                </td>
+                <td>
+                    @if (item.IsVip == 0)
+                    {
+                        <span>No info</span>
+                    }
+                    else
+                        @(item.IsVip == Models.Vip.NotVip ? "Not VIP" : @item.IsVip)
+
+                </td>
+                <td>
+                    @item.Country
+                </td>
+                <td>
+
+                    <a asp-page="DeleteHotelBooking" asp-route-Code="@item.BookingId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

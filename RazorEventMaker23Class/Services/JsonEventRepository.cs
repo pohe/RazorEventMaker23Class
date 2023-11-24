@@ -27,14 +27,14 @@ namespace RazorEventMaker23Class.Services
                 ev.Id = 1;
             }
             events.Add(ev);
-            JsonFileWriter.WriteToJson(events, jsonFileName);
+            JsonFileWriter<Event>.WriteToJson(events, jsonFileName);
         }
 
         public void DeleteEvent(Event ev)
         {
             List<Event> events = GetAllEvents();
             events.Remove(ev);
-            JsonFileWriter.WriteToJson(events, jsonFileName);
+            JsonFileWriter<Event>.WriteToJson(events, jsonFileName);
         }
 
         public List<Event> FilterEvents(string filterCriteria)
@@ -54,7 +54,7 @@ namespace RazorEventMaker23Class.Services
 
         public List<Event> GetAllEvents()
         {
-            return JsonFileReader.ReadJson(jsonFileName);
+            return JsonFileReader<Event>.ReadJson(jsonFileName);
         }
 
         public Event GetEvent(int id)
@@ -97,7 +97,7 @@ namespace RazorEventMaker23Class.Services
                         break;
                     }
                 }
-                JsonFileWriter.WriteToJson(events, jsonFileName);
+                JsonFileWriter<Event>.WriteToJson(events, jsonFileName);
             }
         }
     }

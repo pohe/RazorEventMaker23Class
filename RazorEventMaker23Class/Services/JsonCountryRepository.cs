@@ -20,7 +20,7 @@ namespace RazorEventMaker23Class.Services
 
         public List<Country> GetAllCountries()
         {
-            return JsonFileReader.ReadJsonCountry(filePath);
+            return JsonFileReader<Country>.ReadJson(filePath);
         }
 
         public Country GetCountry(string code)
