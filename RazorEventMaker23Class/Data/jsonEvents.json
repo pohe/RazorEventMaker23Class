@@ -9,15 +9,6 @@
     "DateTime": "2022-11-24T08:37:00"
   },
   {
-    "Id": 5,
-    "EventImage": "tennis.jfif",
-    "CountryCode": "DK",
-    "Name": "Tennis",
-    "Description": "I hallen ...",
-    "City": "K\u00F8benhavn",
-    "DateTime": "2023-11-16T11:02:00"
-  },
-  {
     "Id": 6,
     "EventImage": "sejlads.jpg",
     "CountryCode": "DK",
@@ -34,5 +25,14 @@
     "Description": "Der sejles",
     "City": "Roskilde",
     "DateTime": "2023-11-20T13:05:00"
+  },
+  {
+    "Id": 8,
+    "EventImage": "0226f13f-7707-478b-862f-de66411db392_220602_22310_JJ_Zealand_Magnus_DFD_0012.JPG",
+    "CountryCode": "DK",
+    "Name": "Super kundeservice",
+    "Description": "Introduktion til kundeservice",
+    "City": "Ballerup",
+    "DateTime": "2023-11-27T12:43:00"
   }
 ]

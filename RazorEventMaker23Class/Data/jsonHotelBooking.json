@@ -23,5 +23,19 @@
     "PriceModel": "Luxus",
     "IsVip": 2,
     "Country": 4
+  },
+  {
+    "BookingId": 3,
+    "HotelId": 1,
+    "UserId": 1,
+    "DateTime": "2023-11-27T12:45:00",
+    "NumberOfDays": 7,
+    "Facilities": [
+      "Swimmingpool",
+      "VIP area"
+    ],
+    "PriceModel": "Discount",
+    "IsVip": 2,
+    "Country": 1
   }
 ]
